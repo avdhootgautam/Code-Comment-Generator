@@ -1,0 +1,7 @@
+#Crew AI
+crewai
+
+#Hugging Face Integration
+langchain-huggingface
+transformers
+huggingface-hub
