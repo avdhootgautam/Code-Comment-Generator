@@ -1,6 +1,7 @@
 #Crew AI
 
 crewai
+litellm #this is used when you are using the open source model
 
 #Hugging Face Integration
 
@@ -16,3 +17,9 @@ langchain-core
 #Environment Varialbe Management
 
 python-dotenv
+
+#Provide styles for the loading model or any time consuming work
+yaspin
+
+#deeplearning framework
+torch
