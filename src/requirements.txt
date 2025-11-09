@@ -1,7 +1,18 @@
 #Crew AI
+
 crewai
 
 #Hugging Face Integration
+
 langchain-huggingface
 transformers
 huggingface-hub
+
+#langchain
+
+langchain
+langchain-core
+
+#Environment Varialbe Management
+
+python-dotenv

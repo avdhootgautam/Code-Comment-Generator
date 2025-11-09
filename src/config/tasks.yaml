@@ -1,0 +1,26 @@
+comment_adder_task:
+  description: >
+    You will receive a piece of source code and a set of high-level requirements.
+    Your goal is to understand the logic and structure of the code, and then
+    add clear, precise, language-appropriate inline comments WITHOUT modifying
+    the actual code behavior or structure.
+
+    The inline comments should:
+      - Explain the purpose of each class, function, and major logic block.
+      - Clarify variable roles, control flow, and complex operations.
+      - Highlight assumptions or missing validations.
+      - Add TODO notes where improvements may be needed.
+      - Follow the natural commenting conventions of the language.
+    
+    IMPORTANT RULES:
+      - Absolutely DO NOT rewrite, refactor, reorder, rename, or optimize the code.
+      - Only add comments directly above or beside existing lines.
+      - Output ONLY the commented version of the code — no explanations, no markdown,
+        no summaries, no design documentation.
+
+    Here is the input code to comment: {code}
+    Here are the high-level requirements: {requirements}
+  expected_output: >
+    A version of the given code with clear, accurate inline comments added,
+    following the language's comment style, and WITHOUT altering the original code.
+  agent: comment_adder

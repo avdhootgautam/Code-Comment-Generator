@@ -1,38 +1,38 @@
-requirements = """
-The system should implement an AI-powered code-commenting and backend-design generator called "comment_adder".
+requirements= """
+    The system should implement an AI-powered code-commenting agent called "comment_adder".
+    The core purpose of the system is to:
+    - Accept raw source code in any programming language.
+    - Add clear, contextual, and language-appropriate inline comments.
+    - Ensure that the original code is NEVER modified, rewritten, or refactored.
 
-The primary purpose of the system is to accept raw source code and/or high-level project requirements and automatically generate:
-    - Clean, contextual, and language-appropriate inline comments throughout the code.
-    - A detailed backend design document suitable for implementation by a backend developer
+  The agent must:
+    - Understand and comment multiple languages including Python, JavaScript, Java, C++, Go, and TypeScript.
+    - Detect logic flow, control structures, variables, and functions to produce accurate comments.
+    - Follow the correct commenting style for the detected language (//, #, /* */, etc.).
+    - Add:
+        * Brief comments for simple lines
+        * Block comments for important logic
+        * TODO notes where improvements or validations may be required
+    - Identify potential issues such as:
+        * Missing validation checks
+        * Unclear logic
+        * Error-prone patterns
+        * Edge cases not covered
+      and explain them only using comments inside the code.
 
-The system should be capable of:
-    - Understanding code across multiple languages including (but not limited to) Python, JavaScript,
-      Java, C++, Go, and TypeScript.
-    - Adding different comment styles such as brief comments, detailed comments, docstring-level explanations,
-      and TODO-style suggestions based on the user’s selection.
-    - Detecting logical errors, missing validations, potential security issues, and architectural inconsistencies,
-      then reflecting them in comments where appropriate.
-    - Reading high-level requirements and converting them into a complete design specification containing:
-        * API endpoints with request/response schemas.
-        * Database schema and table structures.
-        * Flow diagrams (text-based).
-        * Authentication and authorization rules.
-        * Error handling and edge-case definitions.
-        * Implementation checklist with priorities.
+  The system must NOT:
+    - Produce any backend design documentation.
+    - Modify or rewrite the original code.
+    - Change formatting, indentation, or structure.
+    - Generate extra files or summaries.
 
-The system must support multiple output formats:
-    - Inline commented code.
-    - Annotated full code copy.
-    - Detailed backend design document.
-    - A combined output including comments, design, explanations, and developer task lists.
+  Input handling requirements:
+    - Must work even when programming language is not explicitly mentioned.
+    - Must handle large code blocks by intelligently chunking internally.
+    - Must gracefully handle incomplete, broken, or ambiguous input.
 
-The system must validate user input and must gracefully handle:
-    - Missing language specifiers.
-    - Large code blocks.
-    - Requirements with ambiguous statements.
-
-Non-functional expectations:
-    - Outputs must be deterministic and readable.
-    - Comments should follow the conventional style of the detected language.
-    - The system should remain performant even for large files by chunking code intelligently.
+  Non-functional expectations:
+    - Output must be deterministic and clean.
+    - Comments must increase readability, not clutter the code.
+    - The agent must return ONLY the commented version of the code.
 """
